@@ -23,6 +23,16 @@ public class Item {
     @OneToMany(mappedBy = "item")
     private List<CategoryItem> categoryItems;
 
+    @OneToMany(mappedBy = "item")
+    private List<OrderItem> orderItem;
+
+    public List<CategoryItem> getCategoryItems() {
+        return categoryItems;
+    }
+
+    public void setCategoryItems(List<CategoryItem> categoryItems) {
+        this.categoryItems = categoryItems;
+    }
 
     public String getName() {
         return name;
